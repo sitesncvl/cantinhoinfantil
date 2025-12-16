@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cantinho Infantil – Tia Ana</title>
+  <meta name="description" content="Cantinho Infantil – Creche com cuidado, carinho e aprendizado. Cuidadora profissional Ana, a Tia Ana." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root{
+      --rosa:#ff7ab6;
+      --azul:#4fc3f7;
+      --amarelo:#ffd54f;
+      --verde:#81c784;
+      --roxo:#9575cd;
+      --escuro:#2e2e2e;
+      --claro:#ffffff;
+      --bg:#fffafc;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg);
+      color:var(--escuro);
+      line-height:1.6;
+    }
+    header{
+      background:linear-gradient(135deg,var(--rosa),var(--azul));
+      color:var(--claro);
+      padding:24px 16px;
+    }
+    .container{max-width:1100px;margin:auto;padding:0 16px}
+    .top{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap
+    }
+    .logo{
+      display:flex;align-items:center;gap:12px;font-family:'Baloo 2',cursive
+    }
+    .logo .icon{
+      width:56px;height:56px;border-radius:16px;background:var(--amarelo);
+      display:grid;place-items:center;font-size:28px
+    }
+    nav a{
+      color:#fff;text-decoration:none;margin-left:16px;font-weight:500
+    }
+    nav a:hover{text-decoration:underline}
+
+    .hero{
+      display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center;padding:40px 0
+    }
+    .hero h1{
+      font-family:'Baloo 2',cursive;font-size:42px;line-height:1.1;margin-bottom:12px
+    }
+    .badge{
+      display:inline-block;background:rgba(255,255,255,.2);padding:6px 12px;border-radius:999px;margin-bottom:12px
+    }
+    .hero p{opacity:.95}
+    .cta{
+      margin-top:20px;display:flex;gap:12px;flex-wrap:wrap
+    }
+    .btn{
+      background:var(--amarelo);color:#000;border:none;border-radius:999px;padding:12px 20px;
+      font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px
+    }
+    .btn.alt{background:#fff;color:var(--escuro)}
+
+    .card{
+      background:#fff;border-radius:20px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.08)
+    }
+    .why-title{color:var(--roxo)}
+    .benefits{list-style:none;padding-left:0;margin-top:12px}
+    .benefits li{
+      color:var(--roxo);
+      font-weight:500;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      opacity:0;
+      transform:translateX(-16px);
+    }
+    .benefits li.show{
+      animation:checkIn .6s ease forwards
+    }
+    .benefits li:nth-child(1){animation-delay:.1s}
+    .benefits li:nth-child(2){animation-delay:.25s}
+    .benefits li:nth-child(3){animation-delay:.4s}
+    .benefits li:nth-child(4){animation-delay:.55s}
+
+    @keyframes checkIn{
+      to{opacity:1;transform:translateX(0)}
+    }
+    .benefits li i{color:var(--rosa);margin-right:6px}
+
+    section{padding:56px 0}
+    .section-title{
+      font-family:'Baloo 2',cursive;font-size:32px;margin-bottom:24px;text-align:center
+    }
+
+    .grid{
+      display:grid;grid-template-columns:repeat(4,1fr);gap:20px
+    }
+    .feature{
+      border-radius:20px;padding:24px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.06)
+    }
+    .feature .emoji{font-size:36px}
+    .feature h3{margin:10px 0 6px}
+
+    .about{
+      display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center
+    }
+
+    .schedule{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:20px
+    }
+
+    .contact{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:24px
+    }
+    label{font-size:14px}
+    input,textarea{
+      width:100%;padding:12px;border-radius:12px;border:1px solid #ddd;font-family:inherit
+    }
+    textarea{min-height:120px}
+
+    footer{
+      background:#1f1f1f;color:#fff;padding:24px 0;margin-top:40px
+    }
+    footer .foot{
+      display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap
+    }
+
+    /* Responsivo */
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .about{grid-template-columns:1fr}
+      .schedule{grid-template-columns:1fr}
+      .contact{grid-template-columns:1fr}
+      nav{width:100%}
+    }
+    @media(max-width:480px){
+      .grid{grid-template-columns:1fr}
+      .hero h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="top">
+        <div class="logo">
+          <div class="icon"><i class="fa-solid fa-child-reaching"></i></div>
+          <div>
+            <strong style="font-size:22px">Cantinho Infantil</strong><br>
+            <small>Com a Tia Ana</small>
+          </div>
+        </div>
+        <nav>
+          <a href="#sobre">Sobre</a>
+          <a href="#atividades">Atividades</a>
+          <a href="#rotina">Rotina</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+
+      <div class="hero">
+        <div>
+          <span class="badge">Creche • Educação Infantil • Cuidado Profissional</span>
+          <h1>Um lugar seguro, alegre e cheio de carinho para seu pequeno</h1>
+          <p>No Cantinho Infantil, cada criança é acolhida com atenção, afeto e atividades que estimulam o desenvolvimento, sempre sob os cuidados da Tia Ana.</p>
+          <div class="cta">
+            <a class="btn" href="#contato">Agendar visita</a>
+            <a class="btn alt" href="#sobre">Conhecer a Tia Ana</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="why-title">Por que escolher o Cantinho Infantil?</h3>
+          <ul class="benefits">
+            <li><i class="fa-solid fa-user-nurse"></i> Cuidadora profissional e experiente</li>
+            <li><i class="fa-solid fa-shield-heart"></i> Ambiente seguro e higienizado</li>
+            <li><i class="fa-solid fa-palette"></i> Aprender brincando</li>
+            <li><i class="fa-solid fa-heart"></i> Atenção individualizada</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="atividades">
+    <div class="container">
+      <h2 class="section-title">Atividades</h2>
+      <div class="grid">
+        <div class="feature"><div class="emoji"><i class="fa-solid fa-palette"></i></div><h3>Artes</h3><p>Desenhos, pinturas e criatividade.</p></div>
+        <div class="feature"><div class="emoji"><i class="fa-solid fa-book-open"></i></div><h3>Leitura</h3><p>Histórias que encantam e ensinam.</p></div>
+        <div class="feature"><div class="emoji"><i class="fa-solid fa-music"></i></div><h3>Música</h3><p>Cantigas e ritmo para se divertir.</p></div>
+        <div class="feature"><div class="emoji"><i class="fa-solid fa-person-running"></i></div><h3>Brincadeiras</h3><p>Atividades motoras e recreação.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="container">
+      <h2 class="section-title">Sobre a Tia Ana</h2>
+      <div class="about">
+        <div class="card">
+          <p>Ana, carinhosamente conhecida como <strong>Tia Ana</strong>, é uma cuidadora profissional apaixonada pelo desenvolvimento infantil. Com experiência e dedicação, ela oferece um ambiente acolhedor, seguro e estimulante para as crianças.</p>
+          <p>O Cantinho Infantil nasce do cuidado genuíno, respeito e amor por cada fase da infância.</p>
+        </div>
+        <div class="card">
+          <h3>Valores</h3>
+          <ul>
+            <li><i class="fa-solid fa-heart"></i> Carinho e respeito</li>
+            <li><i class="fa-solid fa-graduation-cap"></i> Educação com responsabilidade</li>
+            <li><i class="fa-solid fa-soap"></i> Higiene e segurança</li>
+            <li><i class="fa-solid fa-handshake"></i> Parceria com a família</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rotina">
+    <div class="container">
+      <h2 class="section-title">Rotina Diária</h2>
+      <div class="schedule">
+        <div class="feature"><h3>Manhã</h3><p>Acolhida, brincadeiras leves e lanche.</p></div>
+        <div class="feature"><h3>Tarde</h3><p>Atividades educativas, almoço e descanso.</p></div>
+        <div class="feature"><h3>Final do dia</h3><p>Recreação, histórias e despedida.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <h2 class="section-title">Contato</h2>
+      <div class="contact">
+        <div class="card">
+          <form>
+            <label>Nome</label>
+            <input type="text" placeholder="Seu nome" />
+            <br><br>
+            <label>Telefone / WhatsApp</label>
+            <input type="text" placeholder="(00) 00000-0000" />
+            <br><br>
+            <label>Mensagem</label>
+            <textarea placeholder="Escreva sua mensagem"></textarea>
+            <br><br>
+            <button class="btn" type="submit">Enviar</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Informações</h3>
+          <p><i class="fa-solid fa-location-dot"></i> Atendimento local</p>
+          <p><i class="fa-solid fa-clock"></i> Horário flexível</p>
+          <p><i class="fa-solid fa-phone"></i> Fale diretamente com a Tia Ana</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot">
+        <p>© 2025 Cantinho Infantil – Todos os direitos reservados</p>
+        <p>Feito com <i class="fa-solid fa-heart"></i> para cuidar do seu bem mais precioso</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const items = document.querySelectorAll('.benefits li');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, index) => {
+        if(entry.isIntersecting){
+          setTimeout(() => {
+            entry.target.classList.add('show');
+          }, index * 150);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    items.forEach(item => observer.observe(item));
+  </script>
+</body>
+</html>
